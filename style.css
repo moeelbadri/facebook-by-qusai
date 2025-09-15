@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  .flex {
+    display: flex;
+    align-items: center;
+  }
+  .container {
+    padding: 0 15px;
+    min-height: 100vh;
+    justify-content: center;
+    background: #f0f2f5;
+  }
+  .facebook-page {
+    justify-content: space-between;
+    max-width: 1000px;
+    width: 100%;
+  }
+  .facebook-page .text {
+    margin-bottom: 90px;
+  }
+  .facebook-page h1 {
+    color: #1877f2;
+    font-size: 4rem;
+    margin-bottom: 10px;
+  }
+  .facebook-page p {
+    font-size: 1.75rem;
+    white-space: nowrap;
+  }
+  .close-button {
+    position: absolute;
+    top: 10px; /* Adjust the top position as needed for spacing */
+    right: 10px; /* Adjust the right position as needed for spacing */
+    font-size: 20px;
+    line-height: 1;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #999; /* Color for the "X" */
+  }
+  .title {
+        margin-left: 20px;
+  }
+  .close-button:hover {
+    color: #ff0000; /* Color for the "X" on hover */
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
+      0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+  }
+  form input {
+    height: 55px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    padding: 0 14px;
+  }
+  .field {
+    display: flex; /* Use a flexbox layout */
+    align-items: center; /* Vertically center the items */
+  }
+  
+  .field input {
+    margin-right: 10px; /* Add some spacing between the inputs */
+  }
+  .radiodev {
+    display: flex; /* Use a flexbox layout */
+    align-items: center; /* Vertically center the items */
+  }
+
+  /* Hide the browser's default radio button */
+.container1 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.container1 {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  margin: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+/* On mouse-over, add a grey background color */
+.container1:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container1 input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container1 input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container1 .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+  form input:focus {
+    outline: none;
+    border-color: #1877f2;
+  }
+  ::placeholder {
+    color: #777;
+    font-size: 1.063rem;
+  }
+  .link {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  .link .login {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #1877f2;
+    padding: 15px 0;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    transition: 0.2s ease;
+  }
+  .link .login:hover {
+    background: #0d65d9;
+  }
+  form a {
+    text-decoration: none;
+  }
+  .link .forgot {
+    color: #1877f2;
+    font-size: 0.875rem;
+  }
+  .link .forgot:hover {
+    text-decoration: underline;
+  }
+  hr {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .button {
+    margin-top: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .button a ,.register {
+    padding: 15px 20px;
+    background: #42b72a;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1.063rem;
+    font-weight: 600;
+    transition: 0.2s ease;
+  }
+  .button a:hover ,register:hover {
+    background: #3ba626;
+  }
+  @media (max-width: 900px) {
+    .facebook-page {
+      flex-direction: column;
+      text-align: center;
+    }
+    .facebook-page .text {
+      margin-bottom: 30px;
+    }
+  }
+  @media (max-width: 460px) {
+    .facebook-page h1 {
+      font-size: 3.5rem;
+    }
+    .facebook-page p {
+      font-size: 1.3rem;
+    }
+    form {
+      padding: 15px;
+    }
+  }
+  .dialog {
+    position: absolute;
+    float: left;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    border-color: white;
+    
+  }
+
+  .title {
+    color: #2196F3;
+
+  }

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Facebook Login Page</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <dialog class="dialog" id="RegisterDialog">
+    <button class="close-button" onclick="closedialog()">X</button>
+    <div class="wrapper">
+      <div class="title">
+        <h1>Sign Up</h1>
+        <p class="p-title">It's quick and easy</p>
+      </div>
+      <form onsubmit="register(this);return false;">
+        <dev class="field" id="err" style="color:red">
+          
+        </dev>
+        <div class="field">
+          <input id="Fname" type="text" required placeholder="First Name" />
+          <input id="Lname" type="text" required placeholder="Last Name" />
+        </div>
+
+        <div class="field">
+          <input id="R_email" type="email" required placeholder="Email Address" autocomplete="email" />
+        </div>
+
+        <div class="field">
+          <input id="R_password" type="password" required placeholder="Password" autocomplete="new-password" />
+        </div>
+
+        <div class="field">
+          <input id="R2_password" type="password" required placeholder="Confirm Password" autocomplete="new-password" />
+        </div>
+        <dev class="field">
+          <label for="start">Birthday date:</label>
+
+          <input type="date" id="Bdate" max="2005-01-01" required/>
+        </dev>
+        <div class="radiodev">
+          <label class="container1">Male
+            <input type="radio" checked="checked" name="radio" value="Male">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container1">Female
+            <input type="radio" name="radio" value="Female">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container1">Unknown
+            <input type="radio" name="radio"  value="Unknown">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <br>
+        By clicking Sign Up, you agree to our Terms, Privacy Policy and Cookies Policy.
+        You may receive SMS Notifications from us and can opt out any time.
+        <div class="button">
+          <button type="submit" class="register">Sign Up</button>
+        </div>
+    </div>
+    </form>
+    </div>
+  </dialog>
+  <div class="container flex">
+    <div class="facebook-page flex">
+      <div class="text">
+        <h1>Facebook</h1>
+        <p>Connect with friends and the world</p>
+        <p>around you on Facebook.</p>
+      </div>
+      <form onsubmit="login(this);return false;">
+        <input id="email" type="email" placeholder="Email or phone number" required autocomplete="email" />
+        <input id="password" type="password" placeholder="Password" required autocomplete="current-password" />
+        <div class="link">
+          <button type="submit" class="login">Login</button>
+          <a href="#" class="forgot">Forgot password?</a>
+        </div>
+        <hr />
+        <div class="button">
+          <a onclick="opendialog()">Create new account</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
